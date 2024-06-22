@@ -33,16 +33,10 @@ function randomIntFromInterval(min, max) { // min and max included
   
 
 // start
-createGrid();
-random.addEventListener("click",()=>{
-    for (let i = 0; i < count; i++) {
-        let k = document.getElementById(i);
-        k.addEventListener("mouseenter", () => {
-            k.style.backgroundColor = "#"+randomIntFromInterval(0,16777216);
-        })
-    }
-
+clear.addEventListener("click",()=>{
+    location.reload();
 })
+createGrid();
 clourPicker.addEventListener("change", () => {
     colour = clourPicker.value;
     for (let i = 0; i < count; i++) {
@@ -59,11 +53,15 @@ boxSize.addEventListener("change", () => {
     createGrid();
 
 })
-clear.addEventListener("click",()=>{
-    deletegrid();
-    createGrid();
-})
+random.addEventListener("click",()=>{
+    for (let i = 0; i < count; i++) {
+        let k = document.getElementById(i);
+        k.addEventListener("mouseenter", () => {
+            k.style.backgroundColor = "#"+randomIntFromInterval(0,16777216);
+        })
+    }
 
+})
 
 
 
