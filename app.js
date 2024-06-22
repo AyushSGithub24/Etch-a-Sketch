@@ -49,8 +49,12 @@ clourPicker.addEventListener("change", () => {
 })
 boxSize.addEventListener("change", () => {
     n = boxSize.value
+    if(n>150){
+        alert("Invalid Box Size")
+    }else{
     deletegrid();
     createGrid();
+    }
 
 })
 random.addEventListener("click",()=>{
