@@ -27,9 +27,7 @@ function deletegrid() {
         container.removeChild(container.lastElementChild);
     }
 }
-function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+ 
   
 
 // start
@@ -61,7 +59,10 @@ random.addEventListener("click",()=>{
     for (let i = 0; i < count; i++) {
         let k = document.getElementById(i);
         k.addEventListener("mouseenter", () => {
-            k.style.backgroundColor = "#"+randomIntFromInterval(0,16777216);
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            k.style.backgroundColor =`rgb(${r}, ${g}, ${b})`;
         })
     }
 

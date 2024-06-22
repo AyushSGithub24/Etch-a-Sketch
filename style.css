@@ -19,7 +19,6 @@ header {
 }
 
 section {
-    margin-top: 50px;
     display: flex;
     height: 500px;
     justify-content: center;
@@ -85,4 +84,12 @@ button:hover {
 #random :hover {
     background-image: none;
     background-color: yellow;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color:#000000;
+    color: white;
+    text-align: center;
 }
