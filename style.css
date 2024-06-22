@@ -48,6 +48,14 @@ div{
     flex-direction: column;
     margin: 50px;
     
+    
      
 }
- 
+
+.Functionality {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: blue;
+    height: 50px;
+}
